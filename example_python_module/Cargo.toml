@@ -1,0 +1,17 @@
+[package]
+name = "rust_python"
+version = "0.1.0"
+authors = ["Lucas Tepper <lucas.tepper.91@gmail.com>"]
+edition = "2021"
+
+[lib]
+name = "rust_python"
+crate-type = ["cdylib"]
+
+[dependencies]
+numpy = "0.14"
+ndarray = "0.15.2"
+
+[dependencies.pyo3]
+version = "0.14"
+features = ["extension-module"]
