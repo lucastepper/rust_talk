@@ -1,14 +1,7 @@
 use pyo3::prelude::*;
 use numpy::IntoPyArray;
 use numpy as np;
-use ndarray as nd;
 
-
-fn _incr_array(mut array: nd::ArrayViewMut1<f64>, scalar: f64) {
-    for i in 0..array.len() {
-        array[i] += scalar;
-    }
-}
 
 // muatate a numpy array inplace
 // 'py is the lifetime of the python interpreter
